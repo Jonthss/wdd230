@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campina Grande Chamber of Commerce - Site Plan</title>
+    <meta name="description" content="Site plan for the Campina Grande Chamber of Commerce website.">
+    <meta name="author" content="Jonathas Barbosa de Oliveira">
+    <link href="styles/siteplan.css" rel="stylesheet">
+    <script src="scripts/siteplan.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00274D;
+            --secondary-color: #E3B505;
+            --background-color: #F4F4F4;
+            --text-color: #222222;
+            --header-text-color: white;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--header-text-color);
+            padding: 20px;
+            text-align: center;
+            font-family: 'Tenor Sans', sans-serif;
+        }
+        h1 {
+            color: var(--header-text-color);
+        }
+        h2, h3 {
+            color: var(--primary-color);
+        }
+        #color-list li, #typo-list li {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .wireframes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .wireframes figure {
+            margin: 0;
+        }
+
+        h2#wireframes-title {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Campina Grande Chamber of Commerce - Site Plan</h1>
+    </header>
+    <main>
+        <h2>Website Name:</h2>
+        <p>Campina Grande Chamber of Commerce</p>
+        <h2>Purpose of the Site:</h2>
+        <p>The Campina Grande Chamber of Commerce aims to promote local businesses, foster economic development, and provide valuable resources to entrepreneurs and investors. It serves as a hub for business networking, community engagement, and economic insights.</p>
+        <h2>Scenarios</h2>
+        <ul>
+            <li>What upcoming events will the chamber host to support local businesses?</li>
+            <li>Where can I find a directory of businesses associated with the chamber?</li>
+            <li>What economic initiatives are being developed in Campina Grande?</li>
+        </ul>
+        <h2>Color Scheme:</h2>
+        <ul id="color-list">
+            <li id="primary">Primary Color: #00274D</li>
+            <li id="secondary">Secondary Color: #E3B505</li>
+            <li id="background">Background Color: #F4F4F4</li>
+            <li id="text">Text Color: #222222</li>
+        </ul>
+        <h2>Typography:</h2>
+        <ul id="typo-list">
+            <li><h1 id="typoh1">Header Font: Tenor Sans</h1></li>
+            <li><h2>Subheader Font: Tenor Sans</h2></li>
+            <li>Body Text Font: Raleway</li>
+        </ul>
+        <h2 id="wireframes-title">Wireframes</h2>
+        <div class="wireframes">
+            <figure id="mobile-wireframe">
+                <h3>Mobile View</h3>
+                <img src="images/mobile-wireframe.jpg" alt="Mobile wireframe" height="400" width="150" loading="lazy">
+            </figure>
+            <figure id="desktop-wireframe">
+                <h3>Desktop View</h3>
+                <img src="images/desktop-wireframe.jpg" alt="Desktop wireframe" height="400" width="500" loading="lazy">
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            🌎 Campina Grande Chamber of Commerce 🌎
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        console.log("Initializing script...");
+        const today = new Date();
+        document.querySelector("#currentyear").textContent = today.getFullYear();
+        document.querySelector("#lastModified").textContent = `Last Modified: ${document.lastModified}`;
+        console.log("Current year set to:", today.getFullYear());
+        console.log("Last modified date:", document.lastModified);
+    </script>
+</body>
+</html>
