@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathas Oliveira - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development - Jonathas Oliveira - Course assignment porta">
+    <meta name="author" content="Jonathas Barbosa de Oliveira">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles\base.css">
+    <link rel="stylesheet" href="styles\larger.css">
+</head>
+<body>
+    <header class="container">
+        <img src="images\profile.jpg" alt="Jonathas's photo" width="50" height="64" class="imagem">
+        <span class="texto">Jonathas Barbosa de Oliveira</span>
+    </header>
+    
+    <nav>
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>WDD 230: Web Frontend Development</h1>    
+        <br>
+        <section class="card">
+            <h2>Learning Activities</h2>
+            <ul>
+                <li>Week 01: <a href="#">Layout</a></li>
+                <li>Week 02: <a href="#"></a> </li>
+                <li>Week 03: <a href="#"></a> </li>
+                <li>Week 04: <a href="#"></a> </li>
+                <li>Week 05: <a href="#"></a> </li>
+                <li>Week 06: <a href="#"></a> </li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Information</h2>
+            <p>Weather: <span id="weather">Loading...</span></p>
+            <p>Number of visits: <span id="visits">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Jonathas Oliveira, Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts\getDates.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, footer, nav {background-color: #bbb;}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6; /* Melhora a legibilidade */
+    color: #333; /* Cor escura para o texto */
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    font-weight: 700; /* Negrito para os títulos */
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%; 
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.5rem; /* Ajusta o tamanho do subtítulo */
+}
+
+.container {
+    display: flex; /* Usando flexbox para alinhar os itens */
+    align-items: center; /* Alinha a imagem e o texto verticalmente no centro */
+    justify-content: center; /* Alinha tudo no centro horizontalmente */
+    padding: 10px;
+}
+
+.imagem {
+    margin-right: 15px; /* Espaçamento à direita da imagem */
+}
+
+.texto {
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    color: #333; 
+    text-transform: capitalize; 
+    font-family: 'Arial', sans-serif; 
+}
+ 
+
+
+
+
+
+nav {
+    background-color: #154e13;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255, 0.2); 
+}
+
+nav .active {
+    background-color: rgba(0,0,0,0.3);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem 2vw;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+/* Styling for the card sections */
+.card {
+    border: 1px solid #415541;
+    background-color: #e9f5e9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.card h2 {
+    background-color: #415541;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: .75rem 0;
+}
+
+.card ul {
+    padding: 10px; 
+}
+
+.card p {
+    padding: 10px; 
+    text-align: center;
+}
+
+
+footer {
+    color: white;
+    text-align: center;
+    padding: .5rem;
+}
+
+#lastModified {
+    color: yellow; /* Altera a cor do texto para amarelo */
+}

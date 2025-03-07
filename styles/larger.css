@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 20px; 
+    }
+
+    .card {
+        box-shadow: 1px 1px 10px black;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;  
+    }
+
+    .imagem {
+        box-shadow: 1px 1px 10px black;
+    }
+} 
