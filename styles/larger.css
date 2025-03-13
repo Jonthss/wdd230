@@ -9,8 +9,9 @@
         box-shadow: 1px 1px 10px black;
     }
     
-    nav ul {
-        display: flex;
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
     }
 
     nav ul li {
@@ -19,5 +20,9 @@
 
     .imagem {
         box-shadow: 1px 1px 10px black;
+    }
+
+    #menu {
+        display: none;
     }
 } 
