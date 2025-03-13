@@ -26,10 +26,10 @@ themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
 
     if (body.classList.contains('dark-mode')) {
-        themeToggle.textContent = '☀️ Light Mode';
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; 
         localStorage.setItem('theme', 'dark');
     } else {
-        themeToggle.textContent = '🌙 Dark Mode';
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; 
         localStorage.setItem('theme', 'light');
     }
 });
