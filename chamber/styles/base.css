@@ -109,7 +109,7 @@ nav li {
 .hero {
     position: relative; /* Permite que o texto seja posicionado sobre a imagem */
     width: 100%; /* Ocupa a largura total do contêiner pai */
-    max-width: auto; /* Define uma largura máxima para a hero image */
+    max-width: 100%; /* Define uma largura máxima para a hero image */
     max-height: 600px; /* Define uma altura máxima para a hero image */
     margin: 0 auto; /* Centraliza a hero image na página */
     overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
