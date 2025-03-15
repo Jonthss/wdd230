@@ -2,7 +2,7 @@
 
     nav {
         display: flex;
-        max-width: auto;
+        max-width: 100%;
         margin: 0 auto;
         border-radius: 4px;
         text-align: center;
@@ -100,7 +100,7 @@
     }
 
     h1 {
-        margin: left;
+        margin-left: 0;
         font-size: 1.5rem;
         font-family: var(--font-family);
     }
