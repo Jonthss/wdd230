@@ -30,12 +30,12 @@ h2 {
 .container {
     display: flex; /* Usando flexbox para alinhar os itens */
     align-items: center; /* Alinha a imagem e o texto verticalmente no centro */
-    justify-content: center; /* Alinha tudo no centro horizontalmente */
+    justify-content: center; 
     padding: 10px;
 }
 
 .imagem {
-    margin-right: 15px; /* Espaçamento à direita da imagem */
+    margin-right: 15px;
 }
 
 .texto {

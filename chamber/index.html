@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campina Grande Chamber of Commerce</title>
+    <meta name="description"content="This chamber web site is intended to help the comunity and people who is interested in personal and business development">
+    <meta name="author" content="Jonathas Barboosa de Oliveira">
+    <meta property="og:title" content="Campina Grande Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"content="https://www.correiobraziliense.com.br/cbradar/wp-content/uploads/2025/02/Campina-Grande_1740427217919.jpg">
+    <meta property="og:url" content="https://jonthss.github.io/wdd230/">
+
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/large.css" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Campina Grande Chamber of Commerce</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="menu"></button>
+    </header>
+    <main>
+        <div class="hero">
+            <figure>
+                <img src="images/hero_1.png" alt="Campina Grande" loading="lazy" width="800" height="400">
+            </figure>
+            
+            <div class="hero-text">
+                <h2>Discover Campina Grande</h2>
+                <p>Explore the city's rich culture, vibrant economy, and unique attractions.</p>
+            </div>
+
+            <button id="join-button">Learn More</button>
+        </div>
+        <section id="events-weather">
+            <div>
+                <h2>Upcoming Events</h2>
+                <p>Business Networking - March 25</p>
+                <p>Marketing Strategies Webinar - April 10</p>
+                <p>Local Business Expo - May 5</p>
+            </div>
+                <div class="weather-card">
+                    <h2>Weather in Campina Grande</h2>
+                    <div class="weather-info">
+                        <p><strong>Temperature:</strong> <span id="temperature">--</span>°C</p>
+                        <p><strong>Condition:</strong> <span id="weather-condition">--</span></p>
+                        <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+                        <p><strong>Wind Speed:</strong> <span id="wind-speed">--</span> m/s</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2>Spotlights</h2>
+        <section id="spotlights">
+            <div class="spotlight">
+                <h3>Some spotlight 1</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, odit?</p>
+            </div>
+            <div class="spotlight">
+                <h3>Some spotlight 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, expedita!</p>
+            </div>
+            <div class="spotlight">
+                <h3>Some spotlight 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, atque?</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> | Jonathas Oliveira | Campina Grande Chamber of Commerce | WDD230 Project</p>
+        <p> Last Modification: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/weather.js"></script>
+
+</body>
+
+</html>

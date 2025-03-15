@@ -1,0 +1,253 @@
+:root {
+    --primary-color: #00274D;
+    --secondary-color: #E3B505;
+    --accent1-color: #00274D;
+    --accent2-color: #E3B505;
+
+    --font-family: "Mulish", sans-serif;
+    --primary-heading-size: 2.5rem;
+    --primary-heading-weight: 800;
+    --secondary-headings-size: 1.5rem;
+    --secondary-heading-weight: 600;
+    --paragraph-size: 1rem;
+    --paragraph-weight: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+header {
+    background-color: var(--accent1-color);
+    color: #E3B505;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: auto;
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+}
+
+nav {
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-family);
+}
+
+#menu {
+    font-size: 1rem;
+    border: 0;
+    background: none;
+    color: #ffffff;
+    margin: 25px;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    color: white;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+}
+
+.open a {
+    display: block;
+}
+
+
+/* Estilos para a hero image */
+
+.hero {
+    position: relative; /* Permite que o texto seja posicionado sobre a imagem */
+    width: 100%; /* Ocupa a largura total do contêiner pai */
+    max-width: auto; /* Define uma largura máxima para a hero image */
+    max-height: 600px; /* Define uma altura máxima para a hero image */
+    margin: 0 auto; /* Centraliza a hero image na página */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+    
+}
+
+.hero figure {
+    margin: 0; /* Remove margens padrão do figure */
+}
+
+.hero img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços extras abaixo da imagem */
+}
+
+/* Estilos para o texto sobreposto */
+.hero-text {
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o posicionamento exato */
+    text-align: center; /* Centraliza o texto */
+    color: var(--white); /* Cor do texto */
+    background-color: #00274D;
+    padding: 1.5rem; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 90%; /* Limita a largura do texto */
+    color: white
+}
+
+.hero-text h2 {
+    font-size: 2.5rem; /* Tamanho grande para o título */
+    margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
+    font-family: var(--font-family); /* Usa a fonte do texto */
+    color: #E3B505;
+}
+
+.hero-text p {
+    font-size: 1.2rem; /* Tamanho do parágrafo */
+    margin: 0; /* Remove margens padrão */
+    font-family: var(--textfont); /* Usa a fonte do texto */
+   
+}
+
+
+/* Estilos para o botão de ação */
+
+#join-button {
+    position: absolute; /* Posiciona o botão sobre a imagem */
+    bottom: 180px; /* Distância do fundo do contêiner hero */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o posicionamento exato */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-family: var(--font-family); /* Usa a fonte do site */
+    color: white; /* Cor do texto */
+    background-color: #00274D;
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#join-button:hover {
+    background-color: #E3B505;
+    color: #00274D;
+}
+
+
+
+/* Estilos para o conteúdo principal */
+
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.event-weather h2 {
+    border: 1px solid grey;
+}
+
+#events {
+    background-color: #f8f9fa;
+    text-align: justify;
+}
+
+#spotlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#spotlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.spotlight {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 10px;
+    font-family: var(--font-family);
+}
+
+#events-weather {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna por padrão */
+    gap: 20px; /* Espaçamento entre os elementos */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#events-weather > div {
+    flex: 1; /* Faz com que ambos os divs ocupem o mesmo espaço */
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card {
+    text-align: center;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--accent1-color);
+    color: white;
+}
