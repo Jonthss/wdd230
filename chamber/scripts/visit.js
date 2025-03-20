@@ -24,3 +24,34 @@ document.addEventListener("DOMContentLoaded", function () {
     // Atualiza o localStorage com a data da visita atual
     localStorage.setItem(lastVisitKey, now);
 });
+
+
+// Lazy loading images
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleciona todas as imagens com o atributo 'data-src'
+    const images = document.querySelectorAll('img[data-src]');
+    
+    const config = {
+        rootMargin: '200px 0px', // Distância do topo e do fundo para carregar as imagens
+        threshold: 0.01 // A imagem será carregada quando 1% da imagem estiver visível
+    };
+
+    // Cria o IntersectionObserver para detectar quando a imagem estiver visível
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                // Substitui o atributo 'data-src' pelo 'src' para carregar a imagem
+                image.src = image.dataset.src;
+                image.onload = () => image.classList.add('loaded'); // Opcional: classe para estilizar após o carregamento
+                observer.unobserve(image); // Para de observar a imagem após o carregamento
+            }
+        });
+    }, config);
+
+    // Observa todas as imagens
+    images.forEach(image => {
+        imageObserver.observe(image);
+    });
+});
