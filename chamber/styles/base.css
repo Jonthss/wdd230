@@ -351,13 +351,7 @@ main#discover {
     
 }
 
-.photo-grid img:hover {
-    transform: scale(1.1); /* Aumenta a imagem 10% */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-}
 
-
-/* Responsividade */
 @media (max-width: 800px) {
     main#discover {
         grid-template-columns: 1fr;
@@ -365,4 +359,6 @@ main#discover {
     .photo-grid {
         grid-template-columns: 1fr;
     }
+
+    
 }
