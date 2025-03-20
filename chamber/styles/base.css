@@ -259,3 +259,110 @@ footer {
     background-color: var(--accent1-color);
     color: white;
 }
+
+/* DISCOVER PAGE */
+
+main#discover {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar */
+#sidebar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    text-align: center;
+}
+
+#info {
+    width: 100%; 
+}
+
+#sidebar h2 {
+    border-bottom: 2px solid #E3B505;
+    padding-bottom: 5px;
+    width: 100%;
+    display: block; 
+    text-align: center;
+}
+
+#info p {
+    margin: 5px 0;
+}
+
+#Tourist-attractions {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#Tourist-attractions ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#Tourist-attractions li {
+    padding: 5px 0;
+}
+
+/* Galeria de Fotos */
+#photos {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#photos h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #E3B505;
+    margin-bottom: 10px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#Days {
+    margin-top: 10px;
+    
+}
+
+.photo-grid img:hover {
+    transform: scale(1.1); /* Aumenta a imagem 10% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Responsividade */
+@media (max-width: 800px) {
+    main#discover {
+        grid-template-columns: 1fr;
+    }
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
