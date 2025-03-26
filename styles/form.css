@@ -41,6 +41,10 @@ label {
     color: #ffffff;
 }
 
+::placeholder {
+    color: lightgrey;
+}
+
 /* Input fields */
 input[type="text"],
 input[type="password"],
@@ -122,3 +126,8 @@ button[type="submit"]:hover {
         font-size: 1rem;
     }
 }
+
+.dark-mode .formcontainer {
+    background-color: #333;
+}
+

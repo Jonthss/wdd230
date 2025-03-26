@@ -47,21 +47,21 @@
                 <fieldset>
                     <legend>Create User</legend>
                     <label for="username"><strong>Username:</strong></label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" required placeholder="Enter a username" pattern="[a-zA-Z0-9]{5,}" title="Username must be at least 5 characters long and contain only letters and numbers.">
 
                     <label for="password"><strong>Password:</strong></label>
-                    <input type="password" id="password" name="password" required 
+                    <input type="password" id="password" name="password" required placeholder="Enter a password" 
                            pattern="[a-zA-Z0-9]{8,}" 
                            title="Password must be at least 8 characters long and contain only letters and numbers.">
 
                     <label for="confirmPassword"><strong>Confirm Password:</strong></label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
                     <span id="passwordError" style="color:red; display:none;">Passwords must match!</span>
 
                     <label for="email"><strong>Email:</strong></label>
                     <input type="email" id="email" name="email" required 
                            pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" 
-                           title="Please enter a valid BYUI email address.">
+                           title="Please enter a valid BYUI email address." placeholder="Enter your email">
 
                     <label for="rating"><strong>Page Rating:</strong></label>
                     <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5" 
@@ -78,6 +78,24 @@
         <p>&copy; <span id="currentYear"></span> Jonathas Oliveira, PB - Brazil</p>
         <p id="lastModified"></p>
     </footer>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            let password = document.getElementById('password');
+            let confirmPassword = document.getElementById('confirmPassword');
+            let passwordError = document.getElementById('passwordError');
+
+            if (password.value !== confirmPassword.value) {
+                passwordError.style.display = 'inline';
+                password.value = '';
+                confirmPassword.value = '';
+                password.focus();
+                event.preventDefault();
+            } else {
+                passwordError.style.display = 'none';
+            }
+        });
+    </script>
 
     <script src="scripts/getDates.js" defer></script>
     <script src="scripts/Visits.js" defer></script>
