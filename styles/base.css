@@ -149,6 +149,32 @@ footer {
     padding: .5rem;
 }
 
+/* social media icons */
+
+.social {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.social p {
+    font-size: 16px; 
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.social a img {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.social a:nth-child(3) img {
+    width: 35px; 
+    height: 35px;
+}
+
 #lastModified {
     color: black;
 }
