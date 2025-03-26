@@ -80,7 +80,7 @@ nav li {
 }
 
 #menu.open::before {
-    content: "❌";
+    content: "✖";
 }
 
 .navigation {
@@ -97,6 +97,11 @@ nav li {
     text-align: left;
     text-decoration: none;
     color: white;
+}
+
+nav a:hover {
+    background-color: #E3B505;
+    color: #00274D;
 }
 
 .open a {
