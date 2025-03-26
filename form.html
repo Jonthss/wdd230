@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathas Oliveira - WDD 230 - FORM</title>
+    <title>Form Building Activity - WDD 230 - Web Frontend Development</title>
     <meta name="description" content="FORM - Jonathas Oliveira - WDD230">
     <meta name="author" content="Jonathas Barbosa de Oliveira">
-    
-    <meta property="og:title" content="Jonathas Oliveira - WDD 230 - Web Frontend Development">
+    <meta property="og:title" content="WDD 230 - Web Frontend Development | Jonathas Barbosa de Oliveira | Form Building | Learn web development, HTML, CSS, and JavaScript">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://dercio.com.br/wp-content/uploads/2025/02/IMG-20250221-WA0080-1068x801-1-750x375.jpg">
     <meta property="og:url" content="https://jonthss.github.io/wdd230/">
@@ -61,7 +60,8 @@
                     <label for="email"><strong>Email:</strong></label>
                     <input type="email" id="email" name="email" required 
                            pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" 
-                           title="Please enter a valid BYUI email address." placeholder="Please enter a valid email address">
+                           title="Please enter a valid BYUI email address (example@byui.edu)." 
+                           placeholder="example@byui.edu">
 
                     <label for="rating"><strong>Page Rating:</strong></label>
                     <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5" 
@@ -93,6 +93,15 @@
                 event.preventDefault();
             } else {
                 passwordError.style.display = 'none';
+            }
+        });
+
+        document.getElementById("email").addEventListener("input", function () {
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@byui\.edu$/;
+            if (!emailPattern.test(this.value)) {
+                this.setCustomValidity("Please enter a valid BYUI email address (example@byui.edu).");
+            } else {
+                this.setCustomValidity("");
             }
         });
     </script>
