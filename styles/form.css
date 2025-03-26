@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #154e13;
+    --secondary-color: #d4dfcb;
+    --dark-color: #333;
+}
 
 
 nav {
@@ -13,7 +18,7 @@ footer {
     max-width: 600px;
     margin: 1px auto;
     padding: 15px;
-    background-color: #aabd9a;
+    background-color: #d4dfcb;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -28,9 +33,9 @@ fieldset {
 legend {
     font-size: 2rem;
     font-weight: bold;
-    color: white;
     text-align: center;
     margin-bottom: 15px;
+    color: var(--dark-color);
 }
 
 /* Label styles */
@@ -38,7 +43,7 @@ label {
     display: block;
     font-size: 1rem;
     margin-bottom: 3px;
-    color: #ffffff;
+    color: var(--dark-color);
 }
 
 ::placeholder {
@@ -74,7 +79,7 @@ input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     width: 15px; /* Largura do ponteiro */
     height: 15px; /* Altura do ponteiro */
-    background-color: #154e13; /* Cor do ponteiro */
+    background-color: var(--primary-color); /* Cor do ponteiro */
     cursor: pointer; /* Aparece como ponteiro de mão ao passar o mouse */
 }
 
@@ -94,7 +99,7 @@ input[type="email"]:focus {
 /* Rating span */
 #ratingValue {
     font-size: 1rem;
-    color: #ffffff;
+    color: var(--dark-color);
     text-align: center;
     display: block;
     margin-bottom: 15px;
@@ -129,5 +134,48 @@ button[type="submit"]:hover {
 
 .dark-mode .formcontainer {
     background-color: #333;
+}
+
+.dark-mode label {
+    color: #ffffff;
+}
+
+.dark-mode legend {
+    color: #ffffff;
+}
+
+
+/* record html */
+
+.record {
+    background-color: var(--secondary-color);
+    width: 100%;
+    max-width: 600px;
+    margin: 1px auto;
+    padding: 15px;
+    border-radius: 8px;
+    color: var(--dark-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.record > a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.record > a:hover {
+    background-color: #278a1b;
+}
+
+.dark-mode .record {
+    background-color: #333;
+    color: #ffffff;
 }
 
