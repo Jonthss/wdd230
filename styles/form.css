@@ -1,0 +1,104 @@
+.formcontainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 1px auto;
+    padding: 15px;
+    background-color: #aabd9a;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+/* Fieldset */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Label styles */
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    display: inline-block;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+/* Error message */
+#passwordError {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Rating span */
+#ratingValue {
+    font-size: 1.2rem;
+    color: #0066cc;
+}
+
+/* Submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #004d99;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .formcontainer {
+        padding: 15px;
+    }
+    button[type="submit"] {
+        font-size: 1rem;
+    }
+}
