@@ -42,8 +42,7 @@ label {
 /* Input fields */
 input[type="text"],
 input[type="password"],
-input[type="email"],
-input[type="range"] {
+input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -55,6 +54,10 @@ input[type="range"] {
 
 input[type="range"] {
     display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 input[type="password"]:focus,
@@ -72,8 +75,11 @@ input[type="email"]:focus {
 
 /* Rating span */
 #ratingValue {
-    font-size: 1.2rem;
-    color: #0066cc;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Submit button */
