@@ -417,7 +417,7 @@ section#thanks {
 section#thanks h1 {
     font-size: 3rem;
     margin-bottom: 1px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-family: var(--font-family);
     margin: 0;
 }
