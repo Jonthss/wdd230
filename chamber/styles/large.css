@@ -172,7 +172,7 @@
         margin-right: 20px;
     }
     
-    section#membership-levels > h1 {
+    section#membership-levels > h2 {
         grid-column: span 2;
         font-size: 3rem;
         font-weight: bold;
