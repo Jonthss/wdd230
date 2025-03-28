@@ -118,4 +118,52 @@
         transform: scale(1.1); /* Aumenta a imagem 10% */
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Sombra mais forte */
     }
+
+    /* thankyou html */
+
+    section#thanks {
+        border-radius: 10px;
+        text-align: center;
+        color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+        width: 100%;
+        max-width: 800px;
+        justify-content: center;
+    }
+
+    section#thanks h1 {
+        font-size: 5rem;
+        margin-bottom: 1px;
+        color: var(--secondary-color);
+        font-family: var(--font-family);
+        margin: 0;
+    }
+
+    section#thanks p {
+        font-size: 1.5rem;
+        margin: 5px 0;
+        font-family: var(--textfont);
+    }
+
+    /* join html */
+
+    main#join {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #join-form {
+        grid-column: 1;
+    }
+
+    #membership {
+        grid-column: 2;
+    }
+
 }
+
+

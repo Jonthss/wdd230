@@ -35,26 +35,89 @@
     </header>
 
 
-    <main>
+    <main id="join">
         
-        <section id="events-weather">
+        <section id="join-form">
+            <form id="userForm" method="get" action="thankyou.html">
+                <div class="formcontainer">
+                    <fieldset>
+                        <legend>Join the Chamber</legend>
+                        <label for="first-name"><strong>First Name: </strong></label>
+                        <input type="text" id="first-name" name="first-name" required placeholder="Enter your First Name" pattern="[a-zA-Z]{4,}" title="First name must contain only letters">
+
+                        <label for="last-name"><strong>Last Name: </strong></label>
+                        <input type="text" id="last-name" name="last-name" required placeholder="Enter your Last Name" pattern="[a-zA-Z]{4,}" title="Last name must contain only letters">
+    
+                        <label for="title"><strong>Title/Position: </strong></label>
+                        <input type="text" id="title" name="title" placeholder="Enter your Title/Position" pattern="^[A-Za-z\-\s]{7,}$" title="Title/Position must be at least 7 characters long and can include letters, spaces, and hyphens.">
+                        
+                        <label for="email"><strong>Email:</strong></label>
+                        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address (example@email.com)." placeholder="example@email.com">
+
+                        <label for="phone"><strong>Phone:</strong></label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" 
+                               pattern="\d{10,}" title="Please enter a valid phone number with only numbers (minimum 10 digits)." inputmode="numeric">
+    
+                        <label for="organization"><strong>Business/Organization Name: </strong></label> 
+                        <input type="text" id="organization" name="organization" required placeholder="Enter your Business/Organization Name" pattern="[a-zA-Z0-9\s]{3,}" title="Business/Organization Name must be at least 3 characters long and can include letters, numbers, and spaces.">
+                    
+
+                        <label for="membership"><strong>Membership Level:</strong></label>
+                            <select id="membership" name="membership" required>
+                                <option value="#"> Select a option &#9660;</option>
+                                <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        <script>
+                            document.getElementById('userForm').addEventListener('submit', function(event) {
+                                const membership = document.getElementById('membership');
+                                if (membership.value === '#') {
+                                    event.preventDefault();
+                                    alert('Please select a valid membership level.');
+                                }
+                            });
+                        </script>
             
+                        <label for="description"><strong>Business/Organization Description: </strong></label> 
+                        <textarea id="description" name="description" placeholder="Enter a Description of your Business/Organization"></textarea>
+    
+                        <input type="hidden" id="timestamp" name="timestamp" value="">
+                        <script>
+                            document.getElementById('timestamp').value = new Date().toISOString();
+                        </script>
+    
+                        
+    
+                        <button type="submit"><strong>Send Application</strong></button>
+                    </fieldset>
+                </div>
+            </form>
+        <script>
+            document.getElementById('timestamp').value = new Date().toISOString();
+        </script>
+        
+
         </section>
-        <button id="join-button">Join the chamber of commerce</button>
-        <h2>Spotlights</h2>
-        <section id="spotlights">
+        
+        <section id="membership">
+            <h1>Membership Levels</h1>
             <div class="spotlight">
-                <h3>Some spotlight 1</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, odit?</p>
+                <h3>NP Membership:</h3>
+                <p>Free membership for non-profit organizations. Includes access to community networking events and basic training sessions.</p>
             </div>
             <div class="spotlight">
-                <h3>Some spotlight 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, expedita!</p>
+                <h3>Bronze Membership:</h3>
+                <p>Affordable entry-level membership that includes event discounts, access to networking meetups, and periodic training opportunities.</p>
             </div>
             <div class="spotlight">
-                <h3>Some spotlight 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, atque?</p>
-                
+                <h3>Silver Membership:</h3>
+                <p>Provides additional perks such as priority event registration, extended training workshops, marketing support, and a featured listing on our website.</p>
+            </div>
+            <div class="spotlight">
+                <h3>Gold Membership:</h3>
+                <p>Premium level with the most benefits, including exclusive advertising opportunities, spotlight positions on the homepage, VIP event access, free training sessions, and enhanced marketing support.</p>
             </div>
         </section>
     </main>
