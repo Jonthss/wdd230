@@ -23,6 +23,7 @@ body {
     
     font-family: var(--font-family);
     text-align: center;
+    
 }
 
 header {
@@ -437,6 +438,14 @@ section#thanks > ul {
 
 
 /* join html */
+
+main#join {
+    width: 100%; 
+    max-width: 1800px;
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box;
+}
 
 section#join-form {
     display: flex;
