@@ -160,11 +160,11 @@
         grid-column: 1;
     }
 
-    #membership {
+    #membership-levels {
         grid-column: 2;
     }
 
-    section#membership {
+    section#membership-levels {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -172,7 +172,7 @@
         margin-right: 20px;
     }
     
-    section#membership > h1 {
+    section#membership-levels > h1 {
         grid-column: span 2;
         font-size: 3rem;
         font-weight: bold;

@@ -573,13 +573,13 @@ input[required], select[required] {
 
 /* Membership Levels */
 
-section#membership {
+section#membership-levels {
     display: block;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-section#membership p {
+section#membership-levels p {
     text-align: justify;
 }
 
@@ -599,7 +599,7 @@ div.spotlight {
     border-radius: 15px;
     margin-bottom: 15px;
 }
-#membership h1{
+#membership-levels h1{
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
