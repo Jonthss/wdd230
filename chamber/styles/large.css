@@ -174,14 +174,17 @@
     
     section#membership > h1 {
         grid-column: span 2;
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bold;
         text-align: center;
         margin: 0;
         color: var(--primary-color);
-        height: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    
 
 }
 
