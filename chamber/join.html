@@ -64,21 +64,12 @@
 
                         <label for="membership"><strong>Membership Level:</strong></label>
                             <select id="membership" name="membership" required>
-                                <option value="#"> Select a option &#9660;</option>
+                                <option value="" disabled selected>Select an option &#9660;</option>
                                 <option value="np">NP Membership (Non-Profit, No Fee)</option>
                                 <option value="bronze">Bronze Membership</option>
                                 <option value="silver">Silver Membership</option>
                                 <option value="gold">Gold Membership</option>
                             </select>
-                        <script>
-                            document.getElementById('userForm').addEventListener('submit', function(event) {
-                                const membership = document.getElementById('membership');
-                                if (membership.value === '#') {
-                                    event.preventDefault();
-                                    alert('Please select a valid membership level.');
-                                }
-                            });
-                        </script>
             
                         <label for="description"><strong>Business/Organization Description: </strong></label> 
                         <textarea id="description" name="description" placeholder="Enter a Description of your Business/Organization"></textarea>
