@@ -294,7 +294,7 @@ footer {
 
 /* DISCOVER PAGE */
 
-/* Styles for the main content area of the Discover page */
+
 main#discover {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -503,6 +503,7 @@ select#membership {
     box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     cursor: pointer;
     color: lightgray;
 }
