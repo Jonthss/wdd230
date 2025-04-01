@@ -69,7 +69,18 @@
 
         <section class="card">
             <h2><strong>Information</strong></h2>
-            <p><strong>Weather: </strong><span id="weather">Loading...</span></p>
+            <div class="weather-card">
+                <strong>Weather in Campina Grande</strong>
+                <div class="weather-info">
+                    <p><strong>Temperature:</strong> <span id="temperature">--</span>°C</p>
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="" alt="Weather icon">
+                    </div>
+                    <p><strong>Condition:</strong> <span id="weather-condition">--</span></p>
+                    <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+                    <p><strong>Wind Speed:</strong> <span id="wind-speed">--</span> m/s</p>
+                </div>
+            </div>
             <p><strong>Number of visits: </strong><span id="visits">0</span></p>
         </section>
     </main>
@@ -92,6 +103,7 @@
 
     <script src="scripts/getDates.js" defer></script>
     <script src="scripts/Visits.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 </body>
 </html>
 
