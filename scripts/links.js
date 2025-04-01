@@ -1,47 +1,38 @@
-// Base URL for GitHub Pages or your repository
 const baseURL = "https://jonthss.github.io/wdd230/";
-
-// Link to the JSON data
 const linksURL = "https://jonthss.github.io/wdd230/data/links.json";
 
-// Function to fetch links data
 async function getLinks() {
-  const response = await fetch(linksURL);
-  const data = await response.json();
-  displayLinks(data);
-}
-
-// Function to dynamically display links
-function displayLinks(weeks) {
-  const weeksList = document.getElementById('weeks'); // Get the container where links will be added
-
-  // Clear the current content of the container
-  weeksList.innerHTML = '';
-
-  weeks.forEach(week => {
-    // Create a list item for each week
-    const weekItem = document.createElement('li');
-    const weekTitle = document.createElement('strong');
-    weekTitle.textContent = week.week + ":"; // Week number
-    weekItem.appendChild(weekTitle);
-
-    // Create an unordered list for the week's links
-    const linkList = document.createElement('ul');
-
-    week.links.forEach(link => {
-      // Create a list item for each link
-      const linkItem = document.createElement('li');
-      const linkElement = document.createElement('a');
-      linkElement.href = baseURL + link.url; // Link URL
-      linkElement.textContent = link.title; // Link title
-      linkItem.appendChild(linkElement);
-      linkList.appendChild(linkItem);
+    const response = await fetch(linksURL);
+    const data = await response.json();
+    displayLinks(data.weeks);  
+  }
+  
+  function displayLinks(weeks) {
+    const activitiesDiv = document.getElementById("learning-activities"); 
+    const ul = document.createElement("ul");
+  
+    weeks.forEach(week => {
+      const li = document.createElement("li");
+      li.textContent = `${week.week}: `;
+  
+      week.links.forEach((link, index) => {
+        const a = document.createElement("a");
+        a.href = link.url;
+        a.textContent = link.title;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+  
+        li.appendChild(a);
+  
+        if (index < week.links.length - 1) {
+          li.appendChild(document.createTextNode(" | "));
+        }
+      });
+  
+      ul.appendChild(li);
     });
-
-    weekItem.appendChild(linkList);
-    weeksList.appendChild(weekItem);
-  });
-}
-
-// Call the function to get the links data when the page loads
-getLinks();
+  
+    activitiesDiv.appendChild(ul);
+  }
+  
+  getLinks();
