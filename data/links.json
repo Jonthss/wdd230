@@ -1,0 +1,78 @@
+{
+    "weeks": [
+      {
+        "week": "Week 1",
+        "links": [
+          {
+            "url": "week01/holygrail.html",
+            "title": "HG Layout"
+          },
+          {
+            "url": "week01/media-query.html",
+            "title": "mQueries"
+          }
+        ]
+      },
+      {
+        "week": "Week 2",
+        "links": [
+          {
+            "url": "https://codepen.io/Jonathas-the-looper/pen/mydqVNX",
+            "title": "CodePen"
+          },
+          {
+            "url": "week02/design.html",
+            "title": "Design Principles"
+          }
+        ]
+      },
+      {
+        "week": "Week 3",
+        "links": [
+          {
+            "url": "week03/images/landscape.webp",
+            "title": "WebP"
+          },
+          {
+            "url": "week03/bom.html",
+            "title": "LocalStorage BOM"
+          }
+        ]
+      },
+      {
+        "week": "Week 4",
+        "links": [
+          {
+            "url": "https://codepen.io/Jonathas-the-looper/pen/KwKBXev",
+            "title": "CSS Pseudo-Classes"
+          },
+          {
+            "url": "week04/tablebuild.html",
+            "title": "HTML Tables"
+          },
+          {
+            "url": "form.html",
+            "title": "Form Build"
+          }
+        ]
+      },
+      {
+        "week": "Week 5",
+        "links": [
+          {
+            "url": "https://codepen.io/Jonathas-the-looper/pen/QwWzNMP",
+            "title": "CSS Pseudo Elements"
+          },
+          {
+            "url": "week05/new-ward-members.json",
+            "title": "JSON"
+          },
+          {
+            "url": "week05/prophets.html",
+            "title": "Fetch API"
+          }
+        ]
+      }
+    ]
+  }
+  
