@@ -1,0 +1,28 @@
+{
+    "familyName": "Silva",
+    "moveInDate": "2023-06-15",
+    "numOfMembers": 4,
+    "visitedByBishopric": true,
+    "members": [
+      {
+        "name": "Carlos Silva",
+        "gender": "Male",
+        "birthdate": "1985-03-20"
+      },
+      {
+        "name": "Ana Silva",
+        "gender": "Female",
+        "birthdate": "1987-07-12"
+      },
+      {
+        "name": "Lucas Silva",
+        "gender": "Male",
+        "birthdate": "2012-05-06"
+      },
+      {
+        "name": "Mariana Silva",
+        "gender": "Female",
+        "birthdate": "2015-09-30"
+      }
+    ]
+  }
