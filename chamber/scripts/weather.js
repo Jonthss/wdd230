@@ -11,6 +11,7 @@ async function fetchWeather() {
 
         if (data.cod === 200) { 
             updateWeatherCard(data);
+            displayResults(data); // Chama a função para exibir a imagem e descrição
         } else {
             console.error("Erro ao buscar dados do clima:", data.message);
         }
@@ -19,7 +20,6 @@ async function fetchWeather() {
     }
 }
 
-
 function updateWeatherCard(data) {
     document.getElementById("temperature").textContent = Math.round(data.main.temp);
     document.getElementById("weather-condition").textContent = data.weather[0].description;
@@ -27,5 +27,23 @@ function updateWeatherCard(data) {
     document.getElementById("wind-speed").textContent = data.wind.speed;
 }
 
+function displayResults(data) {
+    // Obtém o elemento do ícone do clima
+    const weatherIcon = document.getElementById("weather-icon");
+    const captionDesc = document.getElementById("caption-desc");
+
+    // Obtém a URL da imagem do ícone
+    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+
+    // Obtém a descrição do clima
+    let desc = data.weather[0].description;
+
+    // Define o ícone e os atributos
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', desc);
+
+    // Define o texto da descrição
+    captionDesc.textContent = desc;
+}
 
 window.onload = fetchWeather;
