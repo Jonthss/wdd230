@@ -21,14 +21,21 @@ hamButton.addEventListener('click', () => {
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+function setThemeIcon(isDark) {
+  themeToggle.textContent = isDark ? '☀️' : '🌙';
+}
 
-    if (body.classList.contains('dark-mode')) {
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; 
-        localStorage.setItem('theme', 'dark');
-    } else {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; 
-        localStorage.setItem('theme', 'light');
-    }
+// Verifica tema salvo
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+  setThemeIcon(true);
+} else {
+  setThemeIcon(false);
+}
+
+themeToggle.addEventListener('click', () => {
+  const isDark = body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  setThemeIcon(isDark);
 });
