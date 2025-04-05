@@ -184,6 +184,12 @@
         align-items: center;
     }
 
+    .grid-view {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* fixa em 3 colunas */
+        gap: 1.5rem;
+      }
+
     
 
 }
