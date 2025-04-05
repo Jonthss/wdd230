@@ -607,3 +607,187 @@ div.spotlight {
     margin-bottom: 15px;
     color: var(--primary-color);
 }
+
+/* Directory */
+
+/* Estilo do container principal */
+#member-list {
+    margin-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  
+  /* GRID VIEW */
+  .grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .member-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: solid 1px rgb(152, 151, 151);
+  }
+  
+  .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .member-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007BFF;
+  }
+  
+  .member-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .member-card p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .member-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .member-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* LIST VIEW */
+  .list-view {
+    display: block;
+  }
+  
+  .members-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+  }
+  
+  .members-table thead {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .members-table th,
+  .members-table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+  
+  .members-table th {
+    font-weight: bold;
+  }
+  
+  .members-table a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .members-table a:hover {
+    text-decoration: underline;
+  }
+  
+  /* BOTÕES DE VISUALIZAÇÃO */
+  #grid-btn,
+  #list-btn {
+    padding: 0.5rem 1.25rem;
+    margin: 0.5rem;
+    border: none;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #grid-btn:hover,
+  #list-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+  }
+  
+  /* SPOTLIGHT */
+  .spotlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .spotlights-container .card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    flex: 1 1 calc(33% - 1rem);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+  }
+  
+  .spotlights-container .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+  }
+  
+  .spotlight-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007BFF;
+  }
+
+  .membership-badge {
+    margin-top: 1rem;
+    font-weight: bold;
+    padding: 0.4rem 0.75rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .membership-badge.gold {
+    background-color: gold;
+    color: #000;
+  }
+  
+  .membership-badge.silver {
+    background-color: silver;
+    color: #000;
+  }
+  
+  .membership-badge.bronze {
+    background-color: #cd7f32;
+    color: #fff;
+  }

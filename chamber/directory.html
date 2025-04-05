@@ -35,58 +35,22 @@
     </header>
 
 
-    <main>
-        <div class="hero">
-            <figure>
-                <img src="images/hero_1.png" alt="Campina Grande" loading="lazy" width="800" height="400">
-            </figure>
-            
-            <div class="hero-text">
-                
-                <h2>Discover Campina Grande</h2>
-                <p>Explore the city's rich culture, vibrant economy, and unique attractions.</p>
-            </div>
+    <main class="directory-container">
+        <h1>Campina Grande Chamber of Commerce Members</h1>
+        <div class="directory-menu">
+          <button id="grid-btn">Grid</button>
+          <button id="list-btn">List</button>
         </div>
-        <section id="events-weather">
-            <div class="events">
-                <h2>Upcoming Events</h2>
-                <p>Business Networking - March 25</p>
-                <p>Marketing Strategies Webinar - April 10</p>
-                <p>Local Business Expo - May 5</p>
-            </div>
-            <div class="weather-card">
-                <h2>Weather in Campina Grande</h2>
-                <div class="weather-info">
-                    <p><strong>Temperature:</strong> <span id="temperature">--</span>°C</p>
-                    <div class="weather-icon">
-                        <img id="weather-icon" src="" alt="Weather icon">
-                    </div>
-                    <p><strong>Condition:</strong> <span id="weather-condition">--</span></p>
-                    <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
-                    <p><strong>Wind Speed:</strong> <span id="wind-speed">--</span> m/s</p>
-                </div>
-            </div>
-        </section>
-        <button id="join-button" onclick="location.href='join.html'">Join the chamber of commerce</button>
-        <h2>Spotlights</h2>
-        <section id="spotlights">
-            <div class="spotlight">
-            <h3>Local Business Growth</h3>
-            <br>
-            <p>Discover how local businesses are thriving with the support of the chamber. Join us to be part of this success story.</p>
-            </div>
-            <div class="spotlight">
-            <h3>Community Events</h3>
-            <br>
-            <p>Engage in exciting community events that bring people together and foster collaboration and innovation.</p>
-            </div>
-            <div class="spotlight">
-            <h3>Member Benefits</h3>
-            <br>
-            <p>Explore exclusive benefits for chamber members, including networking opportunities and business resources.</p>
-            </div>
-        </section>
-        </section>
+        <div id="member-list" class="grid">
+            <div class="list-header">
+                <div>Business Name</div>
+                <div>Address</div>
+                <div>Phone Number</div>
+                <div>Website</div>
+                <div>Membership Level</div>
+              </div>
+          <!-- Membros serão inseridos aqui pelo JS -->
+        </div>
     </main>
     
     <footer>
@@ -104,7 +68,7 @@
     </footer>
     <script src="scripts/getDates.js"></script>
     <script src="scripts/menu.js"></script>
-    <script src="scripts/weather.js"></script>
+    <script src="scripts/directory.js"></script>
 
 </body>
 

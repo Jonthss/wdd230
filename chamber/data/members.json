@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Campina Grande Aventuras",
+      "address": "Rua Floriano Peixoto, 1234 - Centro, Campina Grande - PB",
+      "phone": "+55 83 98123-4567",
+      "website": "http://campinagrandeaventuras.com",
+      "image": "./images/adventures.webp",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "Hotel Vista do Açude",
+      "address": "Av. Assis Chateaubriand, 4321 - Bodocongó, Campina Grande - PB",
+      "phone": "+55 83 98234-5678",
+      "website": "http://hotelvistadoacude.com",
+      "image": "./images/hotel.webp",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Sabores de Campina",
+      "address": "Rua João Pessoa, 567 - Centro, Campina Grande - PB",
+      "phone": "+55 83 98345-6789",
+      "website": "http://saboresdecampina.com",
+      "image": "./images/eats.webp",
+      "membershipLevel": "Bronze"
+    },
+    {
+      "name": "Passeios no Açude Velho",
+      "address": "Orla do Açude Velho - Campina Grande - PB",
+      "phone": "+55 83 98456-7890",
+      "website": "http://passeiosacudevelho.com",
+      "image": "./images/tours.webp",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "Artes e Presentes de Campina",
+      "address": "Rua Maciel Pinheiro, 101 - Centro, Campina Grande - PB",
+      "phone": "+55 83 98567-8901",
+      "website": "http://artescampina.com",
+      "image": "./images/crafts.webp",
+      "membershipLevel": "Bronze"
+    },
+    {
+      "name": "Sítio Café Campina",
+      "address": "Zona Rural, Distrito de Catolé de Boa Vista, Campina Grande - PB",
+      "phone": "+55 83 98678-9012",
+      "website": "http://sitiocafecampina.com",
+      "image": "./images/coffee.webp",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Aluguel de Bikes Campina",
+      "address": "Rua Aprígio Veloso, 210 - Catolé, Campina Grande - PB",
+      "phone": "+55 83 98789-0123",
+      "website": "http://bikescampina.com",
+      "image": "./images/bike.webp",
+      "membershipLevel": "Bronze"
+    }
+  ]
+}
