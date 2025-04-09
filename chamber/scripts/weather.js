@@ -28,22 +28,82 @@ function updateWeatherCard(data) {
 }
 
 function displayResults(data) {
-    // Obtém o elemento do ícone do clima
     const weatherIcon = document.getElementById("weather-icon");
     const captionDesc = document.getElementById("caption-desc");
 
-    // Obtém a URL da imagem do ícone
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    // Usa a URL correta para imagem 2x
+    const iconCode = data.weather[0].icon;
+    const iconsrc = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-    // Obtém a descrição do clima
-    let desc = data.weather[0].description;
+    const desc = data.weather[0].description;
 
-    // Define o ícone e os atributos
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
-
-    // Define o texto da descrição
     captionDesc.textContent = desc;
 }
 
 window.onload = fetchWeather;
+
+async function fetchForecast() {
+    const apiKey = "64ed82577ced7f69cb1687f0ce536131"; 
+    const city = "Campina Grande"; 
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.cod === "200") {
+            displayForecast(data.list);
+        } else {
+            console.error("Erro ao buscar previsão:", data.message);
+        }
+    } catch (error) {
+        console.error("Erro na requisição da previsão:", error);
+    }
+}
+
+function displayForecast(forecastList) {
+    const forecastContainer = document.getElementById("forecast");
+    forecastContainer.innerHTML = ""; // limpa qualquer conteúdo anterior
+
+    const dailyForecasts = {};
+
+    // Filtrar uma previsão por dia, de preferência ao meio-dia
+    forecastList.forEach(forecast => {
+        const date = forecast.dt_txt.split(" ")[0];
+        const hour = forecast.dt_txt.split(" ")[1];
+
+        if (hour === "12:00:00" && !dailyForecasts[date]) {
+            dailyForecasts[date] = forecast;
+        }
+    });
+
+    // Pegar os 3 próximos dias
+    const days = Object.keys(dailyForecasts).slice(0, 3);
+
+    days.forEach(date => {
+        const forecast = dailyForecasts[date];
+        const iconCode = forecast.weather[0].icon;
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+        const description = forecast.weather[0].description;
+        const temp = Math.round(forecast.main.temp);
+
+        const spotlight = document.createElement("div");
+        spotlight.className = "spotlight";
+
+        spotlight.innerHTML = `
+            <h3>${new Date(date).toLocaleDateString("en-GB", { weekday: 'long', day: 'numeric', month: 'short' })}</h3>
+            <img src="${iconUrl}" alt="${description}">
+            <p><strong>${temp}°C</strong></p>
+            <p>${description}</p>
+        `;
+
+        forecastContainer.appendChild(spotlight);
+    });
+}
+
+window.onload = () => {
+    fetchWeather();
+    fetchForecast();
+};

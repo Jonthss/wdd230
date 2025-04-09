@@ -58,7 +58,7 @@
                 <h2>Weather in Campina Grande</h2>
                 <div class="weather-info">
                     <p><strong>Temperature:</strong> <span id="temperature">--</span>°C</p>
-                    <div class="weather-icon">
+                    <div id="weather-icon-wrapper">
                         <img id="weather-icon" src="" alt="Weather icon">
                     </div>
                     <p><strong>Condition:</strong> <span id="weather-condition">--</span></p>
@@ -66,7 +66,18 @@
                     <p><strong>Wind Speed:</strong> <span id="wind-speed">--</span> m/s</p>
                 </div>
             </div>
+            <div class="weather-card">
+                <h2>3-Day Forecast</h2>
+                <section id="days">
+                
+                <div id="forecast"></div>
+                
+                </section>
+            </div>
         </section>
+
+        
+
         <button id="join-button" onclick="location.href='join.html'">Join the chamber of commerce</button>
         <h2>Spotlights</h2>
         <section id="spotlights">

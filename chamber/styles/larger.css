@@ -66,6 +66,16 @@
         align-items: center;
     }
 
+    #forecast {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px; /* opcional, adiciona espaço entre colunas */
+        align-items: start; /* melhor alinhamento vertical */
+        margin-top: 20px;
+    }
+
+    
+
     .spotlight {
         width: 100%;
         margin-bottom: 15px;
