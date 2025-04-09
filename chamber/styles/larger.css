@@ -62,9 +62,12 @@
 
     #spotlights {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+        max-width: 1000px; /* Limita a largura máxima */
     }
+
 
     #forecast {
         display: grid;
@@ -74,11 +77,24 @@
         margin-top: 20px;
     }
 
-    
-
     .spotlight {
-        width: 100%;
-        margin-bottom: 15px;
+        background-color: #00274D; /* tom suave de verde claro */
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        color: white;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        max-width: 300px; 
+        min-width: 200px;
+        margin: 0 auto; 
+    }
+
+
+    .spotlight > a:hover {
+        color: #E3B505; /* Change color on hover */
     }
 
     #weather {

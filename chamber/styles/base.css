@@ -265,6 +265,7 @@ section {
     box-sizing: border-box; 
     max-width: calc(100% - 40px); 
     border: 1px solid #ccc;
+    padding: 1rem;
 }
 
 #days{
@@ -275,16 +276,30 @@ section {
     gap: 20px;
     margin: 20px auto;
     text-align: center;
-    padding: 0 20px; 
     box-sizing: border-box; 
     max-width: calc(100% - 40px); 
     border: 1px solid #ccc;
 }
 
+.spotlight a {
+    color: var(--secondary-color);
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+
 .spotlight {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border: 10px;
+    background-color: #00274D; 
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 250px; 
+    margin: 0 auto; 
     font-family: var(--font-family);
 }
 
